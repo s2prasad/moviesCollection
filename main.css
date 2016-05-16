@@ -1,0 +1,140 @@
+body {
+	font-size: 14px;
+	color: #484949;
+	line-height: 18px;
+}
+header {
+	height: 30px;
+	background-color: #000000;
+}
+header h1{
+	text-align: center;
+	margin-bottom: 10px;
+}
+h1{
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 24px;
+	color: #1A9DBA;
+	margin-bottom: 0;
+}
+h2{
+	font-family: Helvetica;
+	font-weight: bold;
+	font-size: 14px;
+	color: #484949;
+}
+
+#wrapper {
+	overflow: hidden;
+}
+#leftCol{
+	background-color: #f6f6f6;
+	float: left;
+	width: 33%;
+	padding-top: 4%;
+}
+#rightCol{
+	box-shadow: -10px 0px 2px 1px #aaaaaa;
+	width: 66%;
+	overflow: hidden;
+	padding-top: 4%;
+	float: left;
+}
+.innerWrapper{
+	width: 90%;
+    margin: 0 auto;
+}
+#movieList {
+	list-style-type: none;
+	overflow: hidden;
+	padding: 0;
+	margin-top: 25px;
+}
+#movieList li{
+	float: left;
+	width: 50%;
+	margin-bottom: 20px;
+}
+#movieList li h2{
+	text-align: center;
+}
+
+#movieList li img{
+	width: 122px;
+	height: 122px;
+	margin-left: 10%;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;
+	border: 9px solid #f6f6f6;	
+}
+.celebImg {
+	width: 66px;
+	height: 66px;
+	float: left;
+	border-radius: 50%;
+	-webkit-border-radius: 50%;
+	-moz-border-radius: 50%;	
+	border: 5px solid #ffffff;		
+}
+.celebDesc{
+	display: inline-block;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+.celebDesc h2, .celebDesc p{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+
+#celebrities{
+	float: left;
+	width: 45%;
+}
+#credits{
+	clear: both;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 20px;
+}
+#creditsWrapper ul{
+	list-style-type: none;
+	padding-left: 10px;
+}
+#creditsWrapper ul li{
+	height: 100%;
+	overflow: hidden;
+}
+#imgSection {
+	float: left;
+	margin-top: 20px;
+}
+#movieDes{
+	float: right;
+    width: 70%;
+    margin-top: 10px;
+}
+#movieDes p {
+	font-weight: bold;
+	margin-bottom: 0;
+	margin-top: 0;
+}
+#movieDes p span{
+	font-weight: normal;
+}
+#about p{
+	font-weight: normal;
+}
+.active h2,.active p{
+	color: #1A9DBA!important;
+}
+ul#movieList li:nth-last-child(2){
+	padding-bottom: 20px;
+}
+.active img{
+  border: 9px solid #1A9DBA!important;
+}
+#celebrities .active img{
+  border: 5px solid #1A9DBA!important;
+}

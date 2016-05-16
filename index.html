@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="moviesApp">
+<head>
+	<title>Elementum HW Assignment</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+</head>
+<body ng-controller="MoviesListCtrl as movies">
+	<header>
+	
+	</header>
+	<div id="wrapper">
+		<div id="leftCol">
+			<div class="innerWrapper">
+				<h1>BROWSE MOVIES</h1>
+				<hr/>
+				<ul id="movieList">
+					<li ng-repeat="part in movies.parts" ng-click="movies.getMovie(part.id);movies.setActiveMovie(part)" ng-class="{active : movies.activeMovie === part}">
+						<img ng-src="{{movies.imgURL}}{{part.poster_path}}">
+						<h2>{{part.title}}</h2>
+					</li>
+				</ul>	
+			</div>
+		</div>
+		<div id="rightCol">
+			<div class="innerWrapper">
+				<h1 id="movieName" ng-bind="movies.movieName">BROWSE MOVIES</h1>
+				<hr/>
+				<section id="imgSection">
+					<img ng-src={{movies.movieImg}} height="262">
+				</section>
+				<section id="movieDes">
+					<section>
+						<h2>WHO MADE IT?</h2>
+						<p>Director: <span id="director">{{movies.directors}}</span></p>
+						<p>Writers: <span id="writers">{{movies.writers}}</span></p>
+						<p>Stars: <span id="stars">{{movies.stars}}</span></p>
+					</section>
+					<section id="about">
+						<h2>WHAT'S IT ABOUT?</h2>
+						<p ng-bind="movies.movieDesc"></p>
+					</section>
+				</section>	
+			</div>
+		
+			<div id="credits">
+				<h1 id="movieCredits">MOVIE CREDITS</h1>
+				<hr/>
+				<div id="creditsWrapper">
+					<section id="celebrities">
+						<ul>
+							<li ng-repeat="cast in movies.topCasts" ng-click="movies.displayImage(cast);movies.setActiveCast(cast)" ng-class="{active : movies.activeCast === cast}">
+								<img class="celebImg" ng-src="{{movies.profileURL}}{{cast.profile_path}}" height="66" width="66" >
+								<section class="celebDesc">
+									<h2>{{cast.name}}</h2>
+									<p>{{cast.character}}</p>
+								</section>
+							</li>
+						</ul>
+					</section>
+					<section>
+						<img ng-src="{{movies.castImageURL}}" height="420" width="347">
+					</section>	
+				</div>
+			</div>	
+		</div>
+	</div>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
